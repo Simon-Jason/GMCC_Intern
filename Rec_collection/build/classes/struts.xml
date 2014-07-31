@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+  
+
+    <package name="default" namespace="/" extends="struts-default">
+		
+		<action name="">  
+     		 <result >/Login.jsp</result>  
+    	</action> 
+  
+		<action name="Login" class="com.jason.struts2.sql.Login" method="execute">  
+     		 
+     		 <result name="manager">/manager.jsp</result>  
+     		 <result name="usererror">/collection.jsp</result> 
+     		 <result name="passworderror">/collection.jsp</result>
+    	</action> 
+        
+        <action name="Collection" class="com.jason.struts2.sql.Collection" method="collection">  
+     		 <result  name="Collection">/Collection.jsp</result>
+     		 <result  name="ERROR">/Collection.jsp</result>  
+     		 <result  name="SUCCESS">/insertSuccess.jsp</result>  
+    	</action> 
+    	
+    </package>
+
+
+</struts>
